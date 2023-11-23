@@ -12,7 +12,7 @@ class Square:
     def __init__(self, size=0):
         """The initialization of the class
             Args:
-                size (int, optional): size of square default is 0 
+                size (int, optional): size of square default is 0
         """
         if type(size) != int:
             raise TypeError("size must be an integer")
