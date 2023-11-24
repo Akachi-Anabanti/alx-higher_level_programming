@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-# 6-sqaure.py
 # Author: Akachi Anabanti
 # -*- coding: utf-8 -*-
 """A module that creates a square class"""
@@ -62,6 +61,8 @@ class Square:
         """Prints the square with #"""
         if self.__size == 0:
             print("")
+
+            return
 
         [print("") for s in range(self.__position[1])]
 
