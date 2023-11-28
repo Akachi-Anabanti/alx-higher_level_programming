@@ -1,0 +1,57 @@
+==============================================
+	Testing 3-say_my_name.py module
+==============================================
+This module supplies a function ```say_my_name()``
+```say_my_name()``` takes the first and last name of
+and prints ```<first name> <last name>```
+
+0. import the module
+::
+	>>> say_my_name = __import__("3-say_my_name").say_my_name
+
+1. first name is not a string
+::
+	>>> say_my_name(1)
+	Traceback (most recent call last):
+	TypeError: first_name must be a string
+
+2. last name is not a string
+::
+	>>> say_my_name("Dave", 1)
+	Traceback (most recent call last):
+	TypeError: last_name must be a string
+
+3. length of first name is 0
+::
+	>>> say_my_name("")
+	Traceback (most recent call last):
+	ValueError: first_name cannot be empty
+
+4. First name is not between Aa-Zz
+::
+	>>> say_my_name(" ")
+	Traceback (most recent call last):
+	ValueError: first_name is not a valid string
+
+5. last name is not between Aa-Zz
+::
+	>>> say_my_name("Dave", " ")
+	Traceback (most recent call last):
+	ValueError: last_name is not a valid string
+
+6. first name is None
+::
+	>>> say_my_name(None)
+	Traceback (most recent call last):
+	TypeError: first_name must be a string
+
+7. last name is None
+::
+	>>> say_my_name("Dave", None)
+	Traceback (most recent call last):
+	TypeError: last_name must be a string
+
+8. last name and first name are correct
+::
+	>>> say_my_name("Dave", "Nutdavison")
+	My name is Dave Nutdavison
