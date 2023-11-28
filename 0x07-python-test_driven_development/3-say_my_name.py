@@ -8,6 +8,7 @@ last name, example
 My name is Akachi Anabanti
 """
 
+
 def say_my_name(first_name, last_name=""):
     """prints the formatted text My name is <first_name> <last_name>
 
@@ -16,9 +17,10 @@ def say_my_name(first_name, last_name=""):
         last_name(str, optional): The last name
 
     Raises:
-        TypeError: If either first_name or last_name is not of the type str
-        ValueError: If length of first_name is zero or either first_name or last_name is
-            not a valid string.
+        TypeError: If either first_name or last_name is not of the
+            type str
+        ValueError: If length of first_name is zero or either
+            first_name or last_name is not a valid string.
 
     Prints the formatted first_name and last_name to stdout
     """
@@ -35,8 +37,8 @@ def say_my_name(first_name, last_name=""):
             raise ValueError("first_name is not a valid string")
 
     for c in last_name:
-        if ord(c) not in range(64, 91) and ord(c) not in range(97, 123) and \
-            len(last_name) != 0:
+        if ord(c) not in range(64, 91) and ord(c) not in range(97, 123) \
+                and len(last_name) != 0:
             raise ValueError("last_name is not a valid string")
 
     print("My name is {} {}".format(first_name, last_name))
