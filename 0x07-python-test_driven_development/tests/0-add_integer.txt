@@ -1,0 +1,66 @@
+================================================
+	Testing the 0-add_integer.py Module
+================================================
+
+This module contains a single function ``add_integer``
+which takes two integers integers as arguments and 
+returns their sum
+
+1.Integers
+=======
+::
+	>>> add_integer = __import__("0-add_integer").add_integer
+
+2.Floats
+======
+::
+	>>> add_integer(2.0, 1.5)
+	3
+
+3.Integer & float
+===============
+::
+	>>> add_integer(1, 1.2)
+	2
+
+4.a is a string
+========================
+::
+	>>> add_integer('a')
+	Traceback (most recent call last):
+	TypeError: a must be an integer
+
+5.b is a string
+========================
+::
+        >>> add_integer(1, 'b')
+        Traceback (most recent call last):
+        TypeError: b must be an integer
+
+6.a is none
+=========
+::
+	>>> add_integer(float('nan'))
+	Traceback (most recent call last):
+	ValueError: cannot convert float NaN to integer
+
+7.b is none
+=========
+::
+	>>> add_integer(1, float('nan'))
+	Traceback (most recent call last):
+	ValueError: cannot convert float NaN to integer
+
+8.a is infinity
+===============
+::
+	>>> add_integer(float('inf'))
+	Traceback (most recent call last):
+	OverflowError: cannot convert float infinity to integer
+
+9.b is infinity
+===============
+::
+	>>> add_integer(1, float('inf'))
+	Traceback (most recent call last):
+	OverflowError: cannot convert float infinity to integer
