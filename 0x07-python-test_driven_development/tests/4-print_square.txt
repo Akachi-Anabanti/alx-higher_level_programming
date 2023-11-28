@@ -1,0 +1,55 @@
+=================================================
+	Testing 4-print_square.py module
+	_________________________________
+	| Author: ```Anabanti Akachi``` |
+	---------------------------------
+==================================================
+This module supplies a function ```print_sqaure```
+that takes an argument size  and prints squares 
+with the character '#'
+
+0. import the function
+::
+	>>> print_square = __import__("4-print_square").print_square
+
+1. size not an integer
+::
+	>>> print_square('2')
+	Traceback (most recent call last):
+	TypeError: size must be an integer
+
+2. size is less than 0
+::
+	>>> print_square(-1)
+	Traceback (most recent call last):
+	ValueError: size must be >= 0
+
+3. size is a float and is less than 0
+::
+	>>> print_square(-1.2)
+	Traceback (most recent call last):
+	TypeError: size must be an integer
+
+4. size is nan
+::
+	>>> print_square(float('nan'))
+	Traceback (most recent call last):
+	TypeError: size must be an integer
+
+5. size is infinity
+::
+	>>> print_square(float('inf'))
+	Traceback (most recent call last):
+	TypeError: size must be an integer
+
+6. size is 3
+::
+	>>> print_square(3)
+	###
+	###
+	###
+
+7. size is 0
+::
+	>>> print_square(0)
+	<BLANKLINE>
