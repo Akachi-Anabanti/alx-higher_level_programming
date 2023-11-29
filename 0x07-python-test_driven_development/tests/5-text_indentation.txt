@@ -1,0 +1,54 @@
+==============================================
+	Testing 5-text_indentation module
+	___________________________
+	| Author: Anabanti Akachi |
+	---------------------------
+===============================================
+
+This module supplies a function ```text_indentation```
+that takes a string text and prints a text with 2 lines after
+each of the character ., ?, :
+
+0. import the module
+::
+	>>> text_indentation = __import__("5-text_indentation").text_indentation
+
+1. text is int
+::
+	>>> text_indentation(1)
+	Traceback (most recent call last):
+	TypeError: text must be a string
+
+2. text is None
+::
+	>>> text_indentation(None)
+	Traceback (most recent call last):
+	TypeError: text must be a string
+
+3. text is given
+::
+	>>> text_indentation(" Hello: Who is there? It is mary")
+	Hello:
+	<BLANKLINE>
+	Who is there?
+	<BLANKLINE>
+	It is mary
+
+4: text is empty
+::
+	>>> text_indentation("")
+
+5. text contians only space
+::
+	>>> text_indentation("      ")
+
+
+6. text contains only delimeters
+::
+	>>> text_indentation("?:.")
+	?
+	<BLANKLINE>
+	:
+	<BLANKLINE>
+	.
+	<BLANKLINE>
