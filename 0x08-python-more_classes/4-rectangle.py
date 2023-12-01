@@ -59,7 +59,8 @@ class Rectangle:
 
     def __repr__(self):
         """Prints a class instance of the class"""
-        return "Rectangle(" + \
-                str(self.__width) + \
-                "," + \
-                str(self.__height) + ")"
+        class_rep = "Rectangle(" + \
+            str(self.__width) + \
+            "," + \
+            str(self.__height) + ")"
+        return class_rep
