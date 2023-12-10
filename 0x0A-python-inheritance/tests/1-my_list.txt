@@ -40,3 +40,9 @@
 	Traceback (most recent call last):
 	...
 	TypeError: '<' not supported between instances of 'str' and 'int'
+
+6 empty object
+::
+	>>> my_list = MyList()
+	>>> my_list.print_sorted()
+	[]
