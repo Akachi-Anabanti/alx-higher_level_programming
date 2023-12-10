@@ -1,0 +1,38 @@
+# Test file for 7-base_geometry.py
+# Author: Anabanti Akachi
+
+1. import the Module
+::
+	>>> base_geometry = __import__("7-base_geometry").BaseGeometry
+	>>> base_geometry = base_geometry()
+
+2. Test Area
+::
+	>>> base_geometry.area()
+	Traceback (most recent call last):
+	...
+	Exception: area() is not implemented
+
+3. Test None validate integer
+::
+	>>> base_geometry.integer_validator("name", None)
+	Traceback (most recent call last):
+	TypeError: name must be an integer
+
+4. Test string as second arg
+::
+	>>> base_geometry.integer_validator("name", "Betty")
+	Traceback (most recent call last):
+	TypeError: name must be an integer
+
+5. A value less than 0
+::
+	>>> base_geometry.integer_validator("name", -1)
+	Traceback (most recent call last):
+	ValueError: name must be greater than 0
+
+6. A value equal to 0
+::
+	>>> base_geometry.integer_validator("name", 0)
+	Traceback (most recent call last):
+	ValueError: name must be greater than 0
