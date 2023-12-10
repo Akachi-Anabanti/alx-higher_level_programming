@@ -36,3 +36,21 @@
 	>>> base_geometry.integer_validator("name", 0)
 	Traceback (most recent call last):
 	ValueError: name must be greater than 0
+
+7 A tuple value
+::
+	>>> base_geometry.integer_validator("invalid tuple", (2,))
+	Traceback (most recent call last):
+	TypeError: invalid tuple must be an integer
+
+8 A set as value
+::
+	>>> base_geometry.integer_validator("set as value", {1,2})
+	Traceback (most recent call last):
+	TypeError: set as value must be an integer
+
+9. List as value
+::
+	>>> base_geometry.integer_validator("mylist", [1, 2])
+	Traceback (most recent call last):
+	TypeError: mylist must be an integer
