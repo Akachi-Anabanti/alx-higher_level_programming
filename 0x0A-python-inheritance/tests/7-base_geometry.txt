@@ -1,10 +1,18 @@
 # Test file for 7-base_geometry.py
 # Author: Anabanti Akachi
 
-1. import the Module
+
+0. import the Module
 ::
 	>>> base_geometry = __import__("7-base_geometry").BaseGeometry
 	>>> base_geometry = base_geometry()
+
+1. passing a parameter
+::
+        >>> bg = __import__("7-base_geometry").BaseGeometry
+        >>> bg(None)
+	Traceback (most recent call last):
+	TypeError: BaseGeometry() takes no arguments
 
 2. Test Area
 ::
@@ -54,3 +62,19 @@
 	>>> base_geometry.integer_validator("mylist", [1, 2])
 	Traceback (most recent call last):
 	TypeError: mylist must be an integer
+
+10. print the method
+::
+	>>> print(base_geometry.area) # doctest: +ELLIPSIS, +NORMALIZE_WHITESPACE
+	<bound method BaseGeometry.area of <7-base_geometry.BaseGeometry object at ...>
+
+11 print the integer validator
+::
+	>>> print(base_geometry.integer_validator) # doctest: +ELLIPSIS, +NORMALIZE_WHITESPACE
+	<bound method BaseGeometry.integer_validator of <7-base_geometry.BaseGeometry object at ...>
+
+12. pass parameter to the area func
+::
+	>>> base_geometry.area(None)
+	Traceback (most recent call last):
+	TypeError: area() takes 1 positional argument but 2 were given
