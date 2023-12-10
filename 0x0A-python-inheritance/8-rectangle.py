@@ -1,14 +1,14 @@
 #!/usr/bin/python3
 # Author: Anabanti Akachi
 
-"""An geometry module"""
+"""An rectangle module"""
 
 
 class Rectangle:
     """Base class"""
 
     def __init__(self, width, height):
-        "instantiates the class"
+        """instantiates the class"""
         self.__width = self.integer_validator("width", width)
         self.__height = self.integer_validator("height", height)
 
