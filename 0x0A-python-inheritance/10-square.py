@@ -11,7 +11,10 @@ class Square(Rectangle):
     """Square class"""
 
     def __init__(self, size):
-        """instantiates the class with size"""
+        """instantiates the class with size
+        Args:
+            size (int): The size of the square
+        """
 
         self.integer_validator("size", size)
         super().__init__(size, size)
