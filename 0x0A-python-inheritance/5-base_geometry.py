@@ -4,5 +4,6 @@
 """An empty class module"""
 
 
-class BaseGeometry(object):
+class BaseGeometry:
+    """Empty Class"""
     pass
