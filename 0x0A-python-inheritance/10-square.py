@@ -1,19 +1,19 @@
 #!/usr/bin/python3
 # Author: Anabanti Akachi
 
-"""Defines a square class that inherits
-from Rectangle class"""
+"""Defines a square that inherits
+from Rectangle """
 
 Rectangle = __import__("9-rectangle").Rectangle
 
 
 class Square(Rectangle):
-    """Square class which inherits from the 
-    Rectangle class
+    """Square which inherits from the 
+    Rectangle 
     """
 
     def __init__(self, size):
-        """instantiates the class with size
+        """instantiates with size
         Args:
             size (int): The size of the square
         """
