@@ -17,12 +17,10 @@ class Student:
     def to_json(self, attrs=None):
         """Returns a dictionary representation of
         the class for the attr"""
-        if attrs is None:
-            return vars(self)
 
         if attrs and type(attrs) == list \
                 and all(type(item) == str for item in attrs):
             return {name: getattr(self, name) for name in attrs
                     if hasattr(self, name)}
 
-        return vars(self)
+        return self.__dict__
