@@ -9,4 +9,5 @@ def read_file(filename=""):
     if filename is None or len(filename) < 1:
         pass
     with open(filename, mode="r", encoding="utf-8") as f:
-        print(f.read())
+        content = f.read()
+        print(content.strip("\n"))
