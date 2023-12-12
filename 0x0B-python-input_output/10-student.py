@@ -20,8 +20,8 @@ class Student:
         if attrs is None:
             return vars(self)
 
-        if attrs and isinstance(attrs, list) \
-                and all(isinstance(item, str) for item in attrs):
+        if attrs and type(attrs) == list \
+                and all(type(item) == str for item in attrs):
             return {name: getattr(self, name) for name in attrs
                     if hasattr(self, name)}
 
