@@ -1,16 +1,16 @@
 #!/usr/bin/python3
 # Author: Anabanti Akachi
-"""Defines a function that writes to a txt file in utf-8"""
+"""Defines a function that appends to a txt file in utf-8"""
 
 
-def write_file(filename="", text=""):
+def append_write(filename="", text=""):
     """Writes to a txt file in UTF-8
     Args:
         filename (str): Name of the txt file
-        text (str): The text to be written
+        text (str): The text to be appended
     Returns:
         The number of characters written
     """
 
-    with open(filename, mode='w', encoding="utf-8") as f:
+    with open(filename, mode='a', encoding="utf-8") as f:
         return (f.write(text))
