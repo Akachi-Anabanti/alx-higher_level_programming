@@ -6,8 +6,5 @@
 
 def read_file(filename=""):
     """reads a text file and prints to stdout"""
-    if filename is None or len(filename) < 1:
-        pass
     with open(filename, mode="r", encoding="utf-8") as f:
-        content = f.read()
-        print(content.strip("\n"))
+        print(f.read(), end="")
