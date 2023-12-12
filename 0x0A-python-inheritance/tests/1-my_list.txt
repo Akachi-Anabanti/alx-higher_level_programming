@@ -63,11 +63,11 @@
 ::
 	>>> my_list = MyList((1, 4, 3))
 	>>> my_list.print_sorted()
-	[1, 3, 4
+	[1, 3, 4]
 
 10: string as input
 ::
 	>>> MyList = __import__("1-my_list").MyList
 	>>> ml = MyList("Hello")
 	>>> ml.print_sorted()
-	['H', 'e', 'l', 'l', 'o']]
+	['H', 'e', 'l', 'l', 'o']
