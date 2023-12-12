@@ -18,15 +18,12 @@ class Student:
     def to_json(self, attrs=None):
         """Returns a dictionary representation of
         the class for the attr"""
-        if (attrs) and isinstance(attrs, list) \
+        if attrs is None:
+            return vars(self)
+
+        if attrs and isinstance(attrs, list) \
                 and all(isinstance(item, str) for item in attrs):
+            return {name: getattr(self, name) for name in attrs
+                    if hasattr(self, name)}
 
-            old_dict = vars(self)
-            new_dict = dict()
-            for name in attrs:
-                if name in old_dict.keys():
-
-                    new_dict.update({name: old_dict[name]})
-
-            return (new_dict)
-        return (vars(self))
+        return vars(self)
