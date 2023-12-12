@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 # Author: Anabanti Akachi
 
 """Defines a function that creates an obj
