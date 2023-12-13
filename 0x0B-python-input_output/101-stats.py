@@ -32,8 +32,8 @@ try:
         if i % 10 == 0:
             print("File size: {}".format(total_size))
             for status_code in sorted(status_codes.keys()):
-                print("{}:{}".format(status_code, status_codes[status_code]))
+                print("{}: {}".format(status_code, status_codes[status_code]))
 except KeyboardInterrupt:
     print("File size: {}".format(total_size))
     for status_code in sorted(status_codes.keys()):
-        print("{}:{}".format(status_code, status_codes[status_code]))
+        print("{}: {}".format(status_code, status_codes[status_code]))
