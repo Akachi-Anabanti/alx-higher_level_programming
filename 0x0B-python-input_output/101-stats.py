@@ -24,8 +24,8 @@ status_codes = defaultdict(int)
 try:
     for i, line in enumerate(sys.stdin, start=1):
         parts = line.split(" ")
-        status_code = parts[len(parts)- 2]
-        file_size = int(parts[len(parts) -1])
+        status_code = parts[- 2]
+        file_size = int(parts[-1])
 
         total_size += file_size
         status_codes[status_code] += 1
