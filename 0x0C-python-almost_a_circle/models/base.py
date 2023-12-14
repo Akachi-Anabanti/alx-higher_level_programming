@@ -1,6 +1,9 @@
 #!/usr/bin/python3
 # Author: Anabanti Akachi
 
+"""Defines a Base class"""
+
+
 class Base:
     """Defines the base class"""
 
