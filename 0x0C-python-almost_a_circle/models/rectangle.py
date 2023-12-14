@@ -4,6 +4,7 @@
 """Defines a rectangle class that inherits base class"""
 from models.base import Base
 
+
 class Rectangle(Base):
     """The Rectangle class
     which inherits the Base class
@@ -21,20 +22,20 @@ class Rectangle(Base):
 
         super().__init__(id)
 
-        self.__width = width
-        self.__height = height
-        self.__x = x
-        self.__y = y
+        self.width = width
+        self.height = height
+        self.x = x
+        self.y = y
 
         @property
-        def __width(self):
+        def width(self):
             """width property getter
             Returns:
                 The value of width
             """
             return self.__width
 
-        @__width.setter
+        @width.setter
         def __width(self, width):
             """width attr setter
             Arg:
@@ -46,8 +47,8 @@ class Rectangle(Base):
             """height attr getter"""
             return self.__height
 
-        @__height.setter
-        def __height(self, height):
+        @height.setter
+        def height(self, height):
             """height attr setter
             Args:
                 height (int):
@@ -55,22 +56,22 @@ class Rectangle(Base):
             self.__height = height
 
         @property
-        def __x(self):
+        def x(self):
             """x attr getter"""
             return self.__x
 
-        @__x.setter
-        def __x(self, x):
+        @x.setter
+        def x(self, x):
             """x attr setter"""
             self.__x = x
 
         @property
-        def __y(self):
+        def y(self):
             """y attrr getter"""
             return self.__y
 
-        @__y.setter
-        def __y(self, y):
+        @y.setter
+        def y(self, y):
             """y attr setter"""
 
             self.__y = y
