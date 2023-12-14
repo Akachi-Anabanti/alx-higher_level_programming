@@ -2,7 +2,7 @@
 # Author: Anabanti Akachi
 
 """Defines a rectangle class that inherits base class"""
-from .base import Base
+Base = __import__("base").Base
 
 
 class Rectangle(Base):
