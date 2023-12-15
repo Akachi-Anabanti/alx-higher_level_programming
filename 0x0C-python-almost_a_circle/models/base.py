@@ -32,6 +32,4 @@ class Base:
 
         if list_dictionaries is None or len(list_dictionaries) == 0:
             return "[]"
-        if type(list_dictionaries) == list and\
-                all([type(item) == dict for item in list_dictionaries]):
-            return json.dumps(list_dictionaries)
+        return json.dumps(list_dictionaries)
