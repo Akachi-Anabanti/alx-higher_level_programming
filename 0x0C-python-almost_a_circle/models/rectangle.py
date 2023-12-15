@@ -97,7 +97,9 @@ class Rectangle(Base):
     def display(self):
         """Display the triangle with '#'"""
 
+        [print("") for _ in range(self.__y)]
         for x in range(self.__height):
+            [print(" ", end="") for _ in range(self.__x)]
             [print('#', end="") for i in range(self.__width)]
             print("")
 
