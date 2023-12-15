@@ -25,7 +25,10 @@ class Base:
     @staticmethod
     def to_json_string(list_dictionaries):
         """returns the json representation of
-        list_dictionaries"""
+        list_dictionaries
+        Args:
+            list_dictionaries (list): list of dict
+        """
 
         if list_dictionaries is None or len(list_dictionaries) == 0:
             return "[]"
