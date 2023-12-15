@@ -21,7 +21,7 @@ class Base:
             self.id = self.__nb_objects
         else:
             self.id = id
-    
+
     @staticmethod
     def to_json_string(list_dictionaries):
         """returns the json representation of
