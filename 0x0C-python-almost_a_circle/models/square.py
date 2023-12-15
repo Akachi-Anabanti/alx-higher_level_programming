@@ -23,6 +23,19 @@ class Square(Rectangle):
         self.width = value
         self.height = value
 
+    def update(self, *args, **kwargs):
+        """updates the class attributes"""
+
+        attributes = ["id", "size", "x", "y"]
+
+        if args:
+            for attr, val in zip(attributes, args):
+                setattr(self, attr, val)
+        if kwargs:
+            for attr, val in kwargs.items():
+                if hasattr(self, attr):
+                    setattr(self, attr, val)
+
     def __str__(self):
         return "[Square] ({}) {}/{} - {}"\
                 .format(self.id, self.x, self.y, self.width)
