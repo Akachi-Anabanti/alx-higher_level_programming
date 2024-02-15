@@ -3,10 +3,9 @@
 const { argv } = require('node:process');
 
 function getSecondBiggest (argv) {
-  if (isNaN(argv[2]) || parseInt(argv[2]) === 1) {
+  if (isNaN(argv[2]) || ((parseInt(argv[2]) === 1 || parseInt(argv[2]) === 0) && argv.length === 3)) {
     return 0;
   }
-
   const arr = [];
   for (let i = 2; i < argv.length; i++) {
     // adds element to the array
