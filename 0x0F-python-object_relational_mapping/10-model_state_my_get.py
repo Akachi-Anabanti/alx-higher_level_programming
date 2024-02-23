@@ -8,7 +8,7 @@ from sqlalchemy.orm import sessionmaker
 from sqlalchemy import create_engine, asc
 
 
-def get_states_with_a(username, password, db, name):
+def find_state(username, password, db, name):
     """get state that has the name
     args:
         username: str - Username in the db
@@ -37,7 +37,7 @@ def get_states_with_a(username, password, db, name):
 
 
 if __name__ == "__main__":
-    get_states_with_a(
+    find_state(
             sys.argv[1],
             sys.argv[2],
             sys.argv[3],
