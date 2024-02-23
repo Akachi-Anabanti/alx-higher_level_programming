@@ -23,10 +23,9 @@ def list_states(name, password, db):
     session = Session()
 
     states = session.query(State).order_by(asc(State.id))
-    i = 1
+
     for state in states:
-        print(f"{i}: {state.name}")
-        i += 1
+        print(f"{state.id}: {state.name}")
 
 
 if __name__ == "__main__":
