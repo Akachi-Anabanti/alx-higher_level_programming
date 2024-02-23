@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""List states that has a in the name
+"""Gets the states that has a in the name
 using the filter
 """
 import sys
