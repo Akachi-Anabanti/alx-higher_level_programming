@@ -28,8 +28,8 @@ def get_states_with_a(name, password, db):
     # start a new session
     session = Session()
 
-    states = session.query(State).filter(State.name.contains('a'))
-    .order_by(asc(State.id))
+    states = session.query(State).filter(
+            State.name.contains('a')).order_by(asc(State.id))
 
     for state in states:
         print(f"{state.id}: {state.name}")
