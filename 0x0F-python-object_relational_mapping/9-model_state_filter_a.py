@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Start link class to table in database
+"""List states that has a in the name
 """
 import sys
 from model_state import State
@@ -7,8 +7,8 @@ from sqlalchemy.orm import sessionmaker
 from sqlalchemy import create_engine, asc
 
 
-def list_states(name, password, db):
-    """Lists all states"""
+def get_states_with_a(name, password, db):
+    """Lists all states that has a in the name"""
     # create the engine
     engine = create_engine(
             'mysql+mysqldb://{}:{}@localhost/{}'.format(
@@ -30,7 +30,7 @@ def list_states(name, password, db):
 
 
 if __name__ == "__main__":
-    list_states(
+    get_states_with_a(
             sys.argv[1],
             sys.argv[2],
             sys.argv[3])
