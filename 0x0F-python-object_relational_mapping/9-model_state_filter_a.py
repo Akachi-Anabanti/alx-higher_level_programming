@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 """List states that has a in the name
+using the filter
 """
 import sys
 from model_state import State
@@ -8,7 +9,12 @@ from sqlalchemy import create_engine, asc
 
 
 def get_states_with_a(name, password, db):
-    """Lists all states that has a in the name"""
+    """Lists all states that has a in the name
+    args:
+        name: str - Username in the db
+        password: str - mysql password
+        db: str - name of DB
+    """
     # create the engine
     engine = create_engine(
             'mysql+mysqldb://{}:{}@localhost/{}'.format(
