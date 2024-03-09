@@ -1,3 +1,3 @@
 #!/bin/bash
 # A scripts that takes a url and displays the body
-curl -s -f -X GET "$1"
+curl -s -f -L -X GET "$1"
