@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!bin/bash
 # A scripts that takes a url and displays the 
 #+ size of the body of the response
 
