@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """A script that sends a post request
 with an email address"""
-import urlib.request
+import urllib.request
 import urllib.parse
 
 
