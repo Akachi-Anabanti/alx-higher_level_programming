@@ -20,5 +20,5 @@ if __name__ == "__main__":
             print("JSON is empty")
         else:
             print("[{}] {}".format(data.get("id"), data.get("name")))
-    except requests.JSONDecoderror:
+    except requests.JSONDecodeError:
         print("Not a valid JSON")
