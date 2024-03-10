@@ -7,12 +7,12 @@ import sys
 
 
 if __name__ == "__main__":
-    if len(sys.argv < 2):
+    if len(sys.argv) < 2:
         letter = ""
     else:
         letter = sys.argv[0]
 
-    re = request.post("http://0.0.0.0:5000/search_user", data={"q": letter})
+    re = requests.post("http://0.0.0.0:5000/search_user", data={"q": letter})
 
     try:
         data = re.json()
